@@ -1,0 +1,59 @@
+header
+    display: flex
+    justify-content: space-between  
+    min-height: 7.5rem 
+.brand
+    text-transform: uppercase
+    color: #ffffff
+    background: $black
+    font-family: Audiowide, monospace
+    font-size: 3.5rem
+    letter-spacing: 0.1rem
+    text-align: center
+    padding: 3rem 4rem
+    align-self: flex-end
+    height: 100%
+    width: 35%
+.main-nav    
+    font-size: 1.4rem    
+    width: 40%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding-top: 2rem
+    &_list
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &_search-field
+        border-bottom: 1px solid $gray
+        margin-top: 1rem        
+        input
+            outline: none
+            border: none
+            padding: 0.7rem
+            padding-left: 0
+            font-size: 1.4rem
+            letter-spacing: 0.1rem
+            width: 95%
+            &::placeholder
+                color: $gray
+        button 
+            outline: none
+            border: none
+            height: 100%
+            width: 5%            
+            background: transparent
+            cursor: pointer
+            float: right
+            img
+                width: 1.8rem
+    &_list-item        
+        img
+            width: 2rem
+        a:hover
+            color: $black
+
+
+
+
