@@ -1,13 +1,14 @@
 main
     display: flex  
     justify-content: space-between  
-    min-height: calc(100vh - 11rem)     
-    align-items: center 
-    margin-top: 2.5rem
+    min-height: 100vh  
     background-image: url(../img/traction-banner.png)
     background-repeat: no-repeat
     background-size: cover
-    background-position: center 110%
+    background-position: center 120%
+
+@media (max-width:1500px)
+    background-position: center 200%
 .heading
     position: relative
     display: flex    
@@ -47,10 +48,10 @@ main
         margin-bottom: 20rem
 .page-indicators 
     position: absolute
-    bottom: 1rem
+    bottom: -13rem
     display: flex
     width: 20rem
-    justify-content: space-around
+    justify-content: space-around    
     &_item
         a
             border-radius: 50%
@@ -64,4 +65,6 @@ main
                 margin-top: -0.3rem
                 background: transparent
                 border: 2px solid #ccc
-
+@media (max-width: 1600px)
+    .page-indicators
+        bottom: -21rem
