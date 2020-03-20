@@ -1,8 +1,78 @@
 .shoe-pic      
     width: 300px    
     height: 250px
-    background-image: linear-gradient(to bottom,transparent 65%,$black),url(../img/shoe_w_reflection.png)
+    background-image: url(../img/shoe_w_reflection.png)
     background-repeat: no-repeat
     background-size: cover
     img
         width: 100%
+main
+  display: flex  
+  justify-content: space-between  
+  min-height: calc(100vh - 11rem)     
+  align-items: center
+  & > *
+
+.shoe-pic
+   transform: scale(2.1) translateY(-3rem) translateX(-12rem)
+
+@media (max-width:1600px)
+    .shoe-pic
+        transform: scale(2) translateY(-3rem) translateX(-5rem)
+.heading
+    position: relative
+    display: flex    
+    flex-direction: column
+    justify-content: space-around
+    height: 75vh
+    
+    h1       
+        font-size: 8rem
+        font-weight: 900        
+        width: 7em
+        color: #333
+        line-height: 0.9
+    p
+        margin-top: -6em
+        font-size: 1.6rem
+        width: 20em
+        color: #333
+        line-height: 1.5
+        letter-spacing: 0.1rem
+.cta-btn
+    background: $black  
+    color: $yellow
+    font-size: 1.8rem
+    outline: none
+    border: none
+    border-radius: 5px
+    width: 7em 
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 3em
+    margin-bottom: 15rem
+    +activate
+@media (max-width:1300px)
+    .cta-btn
+        margin-bottom: 20rem
+.page-indicators 
+    position: absolute
+    bottom: 0
+    display: flex
+    width: 20rem
+    justify-content: space-around
+    &_item
+        a
+            border-radius: 50%
+            display: block
+            width: 1rem
+            height: 1rem            
+            background: #cccccc
+            &.active
+                width: 1.5rem
+                height: 1.5rem 
+                margin-top: -0.3rem
+                background: transparent
+                border: 2px solid #ccc
+
