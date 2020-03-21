@@ -4,23 +4,112 @@
     background-repeat: no-repeat
     background-position: center
     width: 100%
-    min-height: 50vh
+    min-height: 45vh
     border-bottom-left-radius: 35px
     border-bottom-right-radius: 35px
+    .container
+        min-height: 45vh
+        
 
 .like-btn
+    cursor: pointer
     position: absolute
-    top: 45%
+    bottom: -3rem
     right: 2.5rem
+    z-index: 10  
     width: 6rem
     height: 6rem
     font-size: 3rem
     display: flex
     justify-content: center
     align-items: center
-    color: darken($basic-pink,15%)
+    color: $basic-pink
     background: #fff
-    border-radius: 15px
-    box-shadow: 0 6px 5px rgba($basic-pink,0.5)
+    border-radius: 1.5rem
+    box-shadow: 0 6px 5px rgba($basic-pink,0.5)  
+    &:active
+        box-shadow: 0 1px 2px rgba($basic-pink,0.5)
+    +activate
+.menu-btn
+    cursor: pointer
+    position: absolute
+    top: 1.5rem
+    right: 2.5rem
+    font-size: 3rem
+    color: #ffffff
+.prev-btn
+    position: absolute
+    top: 1.5rem
+    left: 2.5rem
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #ffffff
+    background: darken($light-pink,5%)
+    width: 3rem
+    height: 3rem
+    font-size: 1.5rem
+    border-radius: 1rem
+    font-weight: bold
+    cursor: pointer
+    +activate
 
+.product-description   
+    padding: 2.5rem
+    &_title
+        font-size: 2.8rem
+    &_subtitle
+        font-size: 2.2rem
+        font-weight: 400
+        color: darken($gray,35%)
 
+.price-container
+    display: flex
+    justify-content: space-between
+    padding: 1.5rem 0   
+    .price
+        font-weight: 700
+        font-size: 3.2rem
+        display: flex
+        sup          
+            display: block 
+            font-size: 1.6rem
+            padding-right: 0.3rem
+            padding-top: 0.2rem
+
+.quantity
+    font-size: 2rem
+    line-height: 1.5
+    background: $basic-pink
+    border-radius: 1rem
+    padding: 0.3rem
+    color: #ffffff
+    width: 9rem
+    height: 2em
+    display: flex
+    justify-content: space-around
+    a
+        color: inherit
+        +activate
+.details
+    h4
+        font-size: 2rem
+        margin: 0.5em 0
+    p
+        color: darken($gray,35%)
+        font-size: 1.4rem
+        line-height: 1.8        
+
+.add-btn
+    cursor: pointer
+    display: block
+    background: $basic-pink
+    color: #ffffff
+    font-size: 2.1rem
+    border-radius: 1.5rem
+    padding: 2rem
+    width: 70%
+    margin: 2rem auto
+    outline: none
+    border: none
+    +activate
