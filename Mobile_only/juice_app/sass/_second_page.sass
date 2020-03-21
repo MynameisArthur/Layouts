@@ -1,0 +1,146 @@
+.search-container
+    min-height: 20vh
+    padding: 5rem 1rem
+    background: darken($basic-pink,5%)
+    border-bottom-left-radius: 2.5rem
+    border-bottom-right-radius: 2.5rem
+    .container
+        width: 92%
+    &_inputs
+        display: flex        
+        justify-content: space-between
+        align-items: center
+        max-height: 25%
+
+    .menu-btn
+        position: initial
+        border-radius: 1rem
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #ffffff
+        background: darken($light-pink,10%)
+        width: 4.5rem
+        height: 4.5rem
+.search-input
+    width: 80%
+    border-radius: 1rem
+    background: #ffffff
+    padding: 1.2rem 2.5rem   
+    display: flex
+    justify-content: space-between
+    align-items: center
+    input
+        outline: none
+        border: none
+        font-size: 1.5rem
+        &::placeholder
+            color: $basic-pink
+    button
+        outline: none
+        border: none
+        background: none
+        cursor: pointer
+        width: 3rem
+        height: 3rem
+        +activate
+        img
+            object-fit: cover
+            width: 50%
+
+.categories
+    display: flex
+    justify-content: space-between
+    margin-top: 3rem
+    padding: 0 1rem
+    li
+        width: 3rem
+        height: 3rem
+        color: #ffffff        
+    a        
+        font-size: 1.2em
+        background: #fff
+        border-radius: 1rem
+        width: 4rem
+        height: 4rem 
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 0.9rem
+        +activate
+        img
+            object-fit: cover
+            width: 60%
+
+
+
+.shop-container_item
+    h4
+        font-size: 1.8rem
+        margin-bottom: 0.3rem       
+    p
+        color: darken($gray,35%)
+        font-size: 1.4rem
+        line-height: 1.8  
+        word-spacing: 0.2rem 
+
+//shop container
+.shop-container   
+    margin-top: 5rem    
+    display: flex    
+    &_items            
+        width: 60%
+        padding: 0 2rem
+    &_item
+        padding: 2rem 0
+        &:nth-child(2) .quantity
+            background: $golden
+            &:active
+                background: darken($golden,10%)
+        &:nth-child(3) .quantity
+            background: $purple
+            &:active
+                background: darken($purple,10%)
+        p
+            line-height: 1.2
+        .price-container
+            display: flex
+            justify-content: space-between
+            padding: 1.5rem 0   
+        .price           
+            font-size: 2.2rem 
+            padding-top: 1rem            
+            sup                 
+                font-size: 1.2rem                
+        .quantity
+            font-size: 2.4rem
+            line-height: 2           
+            border-radius: 1rem
+            padding: 0.1rem
+            width: 10rem
+            height: 2em  
+            align-items: center           
+            a               
+                color: inherit
+                +activate
+    &_images
+        padding: 1.5rem 0
+        width: 40%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        border-top-left-radius: 1.5rem
+        background: $light-gray
+    &_image
+        width: 11rem
+        height: 11rem
+        border-radius: 1.5rem        
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden        
+        img
+            object-fit: cover
+            width: 200%
+
