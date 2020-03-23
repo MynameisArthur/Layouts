@@ -11,6 +11,13 @@
 <body>
     <div class="wrapper">
         <header>
+            <ul class="header-slider-indicators">
+                <li><a href="#!" class="active"></a></li>
+                <li><a href="#!"></a></li>
+                <li><a href="#!"></a></li>
+                <li><a href="#!"></a></li>
+                <li><a href="#!"></a></li>
+            </ul>
             <nav class="container">
                 <div class="logo"><img src="img/travello_logo.png" alt="travello logo"/></div>
                 <ul class="main-nav">
@@ -72,7 +79,7 @@
                                 <option value="spetempber 2020">September 2020</option>
                             </select>
                         </label>
-                        <button type="submit">SEARCH</button>
+                        <button type="submit" class="large-btn">SEARCH</button>
                     </form>
                 </div>
             </div>
@@ -80,31 +87,42 @@
         </header>
         <section class="destinations-container container">
             <h2>Popular Destinations</h2>
-            <h5>From historical cities to neutral splendours, come see the best of world!</h5>
-            <div class="direction-btns">
-                <button class="direction-btns_btn">&lt;</button>
-                <button class="direction-btns_btn">&gt;</button>
-            </div>
+            <h5 class="destination-container_subheading">
+                From historical cities to neutral splendours, come see the best of world!
+                <div class="direction-btns">
+                    <button class="direction-btns_btn">&lang;</button>
+                    <button class="direction-btns_btn active">&rang;</button>
+                </div>
+            </h5>
             <div class="destinations-slider">
+                
                 <div class="destinations-slider_slide">
-                    <h4>Millenium Bridge</h4>
-                    <p><img src="img/pin.svg" alt="map location pin">London, United Kingdom</p>
-                    <img src="img/millenium-bridge.jpg" alt="Millenium Bridge, London">
+                    <img src="img/millenium-bridge.jpg" alt="Millenium Bridge, London" class="destinations-slider_slide-picture"/>
+                    <div class="destinations-slider_slide-details">
+                        <h5>Millenium Bridge</h5>
+                        <img src="img/pin.svg" alt="map location pin" class="location_pin"/>London, United Kingdom
+                    </div>
                 </div>
                 <div class="destinations-slider_slide">
-                    <h4>Sahara Dessert</h4>
-                    <p><img src="img/pin.svg" alt="map location pin">Merzouga, Marocco</p>
-                    <img src="img/camels-desert.jpg" alt="Sahara Desert">
+                    <img src="img/camels-desert.jpg" alt="Sahara Desert" class="destinations-slider_slide-picture"/>
+                    <div class="destinations-slider_slide-details">
+                        <h5>Sahara Dessert</h5>
+                        <img src="img/pin.svg" alt="map location pin" class="location_pin"/>Merzouga, Marocco
+                    </div>
                 </div>
                 <div class="destinations-slider_slide">
-                    <h4>Gyeongbokgung Palace</h4>
-                    <p><img src="img/pin.svg" alt="map location pin">Seoul, South Korea</p>
-                    <img src="img/gyeonbokgung.jpg" alt="Gyeongbokgung Palace">
+                    <img src="img/gyeonbokgung.jpg" alt="Gyeongbokgung Palace" class="destinations-slider_slide-picture"/>
+                    <div class="destinations-slider_slide-details">
+                        <h5>Gyeongbokgung Palace</h5>
+                        <img src="img/pin.svg" alt="map location pin" class="location_pin"/>Seoul, South Korea
+                    </div>
                 </div>
                 <div class="destinations-slider_slide">
-                    <h4>Kuta Beach</h4>
-                    <p><img src="img/pin.svg" alt="map location pin">Bali, Indonesia</p>
-                    <img src="img/beach.jpg" alt="Kuta Beach, Indonesia">
+                    <img src="img/beach.jpg" alt="Kuta Beach, Indonesia" class="destinations-slider_slide-picture"/>
+                    <div class="destinations-slider_slide-details">
+                        <h5>Kuta Beach</h5>
+                        <img src="img/pin.svg" alt="map location pin" class="location_pin"/>Bali, Indonesia
+                    </div>
                 </div>
             </div>
         </section>
@@ -113,46 +131,58 @@
             <h5>Check out our special offers tour</h5>
             <div class="special_offers-slider">
                 <div class="special_offers-slider_slide">
-                    <img src="img/agra-india.jpg" alt="Agra, India">
-                    <h4>Agra, India</h4>
-                    <ul class="stars-rating">
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                    </ul>
-                    <p>
-                        From <span>$500</span> <button>DETAILS</button>
-                    </p>
+                    <div class="special_offers-slider_img-wrapper">
+                        <img src="img/agra-india.jpg" alt="Agra, India">
+                    </div>
+                    <div class="special_offers-slider_slide-details">
+                        <h4>Agra, India</h4>
+                        <ul class="stars-rating">
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                        </ul>
+                        <p>
+                            From <span>$ 500</span> <button class="large-btn">DETAILS</button>
+                        </p>
+                    </div>
                 </div>
                 <div class="special_offers-slider_slide">
-                    <img src="img/athens.jpg" alt="Athens, Greece">
-                    <h4>Athens, Greece</h4>
-                    <ul class="stars-rating">
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                    </ul>
-                    <p>
-                        From <span>$900</span> <button>DETAILS</button>
-                    </p>
+                    <div class="special_offers-slider_img-wrapper">
+                        <img src="img/athens.jpg" alt="Athens, Greece">
+                    </div>
+                    <div class="special_offers-slider_slide-details">
+                        <h4>Athens, Greece</h4>
+                        <ul class="stars-rating">
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                        </ul>
+                        <p>
+                            From <span>$ 900</span> <button class="large-btn">DETAILS</button>
+                        </p>
+                    </div>
                 </div>
                 <div class="special_offers-slider_slide">
-                    <img src="img/athens.jpg" alt="Istanbul, Turkey">                    
-                    <h4>Istanbul, Turkey</h4>
-                    <ul class="stars-rating">
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                        <li><img src="img/star.svg"/></li>
-                    </ul>
-                    <p>
-                        From <span>$600</span> <button>DETAILS</button>
-                    </p>
+                    <div class="special_offers-slider_img-wrapper">
+                        <img src="img/istanbul.jpg" alt="Istanbul, Turkey">                    
+                    </div>
+                    <div class="special_offers-slider_slide-details">
+                        <h4>Istanbul, Turkey</h4>
+                        <ul class="stars-rating">
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                            <li><img src="img/star.svg"/></li>
+                        </ul>
+                        <p>
+                            From <span>$ 600</span> <button class="large-btn">DETAILS</button>
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="prev-btn"></div>
@@ -206,7 +236,7 @@
                         <label for="newsletter-form_email">Enter your email</label>
                         <input type="email" id="newsletter-form_email">
                     </div>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit" class="large-btn">Subscribe</button>
                 </form>
                 <article class="social-article">
                     <img src="img/travello_logo.png" alt="travello logo"/>

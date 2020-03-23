@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500|ZCOOL+XiaoWei&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|ZCOOL+XiaoWei&display=swap')
 
 
 *,*::before,*::after
@@ -19,7 +19,7 @@ a
 ul
   list-style: none
 
-h1,h2,h3,h4,h5
+h1,h2,h3,h4
   font-family: 'ZCOOL XiaoWei',serif
 
 h2
@@ -27,14 +27,21 @@ h2
   color: darken($brown,25%)
   font-size: 4rem
   margin-bottom: 1em
+  font-weight: 700
+  letter-spacing: 0.1rem
   &:after
     content: ''
     position: absolute
     left: 0
-    bottom: -1.5rem
-    height: 2px
+    bottom: -2rem
+    height: 3px
     background: darken($brown,25%)
     width: 4em
+h5
+  font-weight: 400
+  font-size: 1.6rem
+  color: $dark-gray
+  text-indent: 0.5em
 
 footer
   background: darken($dark-brown,25%)
@@ -42,6 +49,9 @@ footer
 section
   padding: 4rem 0
 
+@mixin activate
+  &:active
+    transform: translateY(1px) scale(0.98)
 @mixin underline-on-hover
   &::after
     content: ''
@@ -55,6 +65,19 @@ section
   &:hover::after
     width: 100%
 
-@mixin activate
-  &:active
-    transform: translateY(1px) scale(0.98)
+.large-btn
+  border-radius: 2.5rem
+  background: darken($brown,25%)
+  color: $white
+  font-weight: 500
+  outline: none
+  border: none
+  height: 3.5em
+  padding: 0 3.5em
+  margin-bottom: -0.5rem
+  align-self: flex-end
+  cursor: pointer
+  transition: background-color 0.25s ease           
+  +activate
+  &:hover
+      background: darken($brown,35%)
