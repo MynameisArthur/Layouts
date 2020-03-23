@@ -19,17 +19,7 @@ nav
         font-size: 1.6rem
         font-weight: 500
         position: relative
-        &::after
-            content: ''
-            position: absolute
-            bottom: -0.2rem
-            left: 0
-            width: 0
-            height: 0.2rem
-            background: $white
-            transition: width 0.3s ease-in-out
-        &:hover::after
-            width: 100%
+        +underline-on-hover
             
 .headings
     display: flex
@@ -49,5 +39,77 @@ nav
         font-size: 1.6rem
         line-height: 2
         text-shadow: 2px 2px 3px $dark-gray
-        
+
+.search-container
+    width: 75%
+    &_form
+        padding: 5rem 0
+        border-radius: 1.5rem
+        background: $white     
+        border-top-left-radius: 0
+        margin-bottom: 4rem
+        display: flex
+        justify-content: space-around
+        button
+            border-radius: 2.5rem
+            background: darken($brown,25%)
+            color: $white
+            font-weight: 500
+            outline: none
+            border: none
+            height: 3.5em
+            padding: 0 3.5em
+            align-self: flex-end
+            cursor: pointer
+            transition: background-color 0.25s ease
+            +activate
+            &:hover
+                background: darken($brown,35%)
+        label            
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            font-size: 1.8rem
+            font-weight: 500
+            height: 4em      
+            color: darken($brown,25%)     
+            select
+                margin-top: 2rem
+                outline: none
+                border: 2px solid $gray
+                border-radius: 0.8rem
+                background: none
+                padding: 1rem 0.5rem
+                width: 15em
+                color: $dark-gray
+                letter-spacing: 0.1rem            
+
+    &_categories
+        display: flex
+        a
+            padding: 2rem
+            text-align: center
+            font-size: 1.8rem
+            color: $white
+            background: rgba($white,0.25)
+            border-top-left-radius: 1.5rem
+            border-top-right-radius: 1.5rem
+            border-bottom: 1px solid rgba($medium-brown,0.3)
+            font-weight: 500
+            position: relative                        
+            &:nth-child(2)::before,
+            &:nth-child(2)::after,
+                position: absolute
+                bottom: 0
+                right: 0
+                content: ''
+                width: 1px
+                height: 2.75em
+                background: rgba($white,0.3)                
+            &:nth-child(2)::before
+                left: 0
+            &.active
+                color: $dark-brown
+                background: $white
+
             

@@ -22,5 +22,39 @@ ul
 h1,h2,h3,h4,h5
   font-family: 'ZCOOL XiaoWei',serif
 
+h2
+  position: relative
+  color: darken($brown,25%)
+  font-size: 4rem
+  margin-bottom: 1em
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -1.5rem
+    height: 2px
+    background: darken($brown,25%)
+    width: 4em
+
 footer
   background: darken($dark-brown,25%)
+
+section
+  padding: 4rem 0
+
+@mixin underline-on-hover
+  &::after
+    content: ''
+    position: absolute
+    bottom: -0.2rem
+    left: 0
+    width: 0
+    height: 0.2rem
+    background: $white
+    transition: width 0.3s ease-in-out
+  &:hover::after
+    width: 100%
+
+@mixin activate
+  &:active
+    transform: translateY(1px) scale(0.98)
