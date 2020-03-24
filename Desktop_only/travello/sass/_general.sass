@@ -19,9 +19,12 @@ a
 ul
   list-style: none
 
-h1,h2,h3,h4
+h1,h2,h3
   font-family: 'ZCOOL XiaoWei',serif
-
+img
+  object-fit: cover!important
+  object-position: center            
+  width: 100%
 h2
   position: relative
   color: darken($brown,25%)
@@ -68,7 +71,7 @@ footer
 
 .large-btn
   border-radius: 2.5rem
-  background: darken($brown,25%)
+  background: $orange
   color: $white
   font-weight: 500
   outline: none
@@ -81,4 +84,4 @@ footer
   transition: background-color 0.25s ease           
   +activate
   &:hover
-      background: darken($brown,35%)
+      background: darken($orange,5%)

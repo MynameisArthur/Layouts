@@ -9,10 +9,7 @@
     height: 70px
     background: $white
     object-fit: cover    
-    border-radius: 5px
-    img
-        width: 100%
-
+    border-radius: 5px    
 
 .destination-container_subheading
     display: flex
@@ -22,9 +19,9 @@
 .special_offers_direction-btns
     button
         outline: none
-        border: 2px solid $brown
+        border: 2px solid $orange
         background: #fff
-        color: $brown
+        color: $orange
         width: 4rem
         height: 4rem
         text-align: center
@@ -35,7 +32,7 @@
         +activate      
         &.active
             color: $white
-            background: $brown
+            background: $orange
 
 
 .destinations-slider
@@ -76,8 +73,6 @@
         object-fit: cover  
         object-position: -25rem center
         height: 100%     
-        
-
 
 .location_pin
     width: 1.8rem
@@ -113,11 +108,9 @@
         display: flex
         flex-direction: column
         background: lighten($medium-brown,40%)
-        img
-            object-fit: cover
-            object-position: center
+        img            
             height: 100%
-            width: 100%
+            
     &_slide-details 
         margin-top: 2rem     
         flex-basis: 35%
@@ -126,8 +119,7 @@
         justify-content: center
         padding: 1.5rem
         h4
-            font-size: 2.3rem
-            font-family: Monserrat,sans-serif
+            font-size: 2.3rem            
             margin-bottom: 1rem
         p
             margin-top: 1.5rem
@@ -135,7 +127,7 @@
         span
             font-weight: 500
             font-size: 3rem
-            color: darken($brown,25%)
+            color: $orange
         .large-btn
             float: right
 
@@ -159,3 +151,65 @@
     img
         width: 2rem
         height: 2rem
+
+.blog-container    
+    @extend .offers-container
+    &_articles
+        margin-top: 3rem
+        grid-column: 1/-1
+        grid-row: 3/-1
+        display: flex
+        height: 70vh
+    &_main-article 
+        height: 100%
+        flex-basis: 50%  
+        margin-right: 3rem  
+        img            
+            height: 55vh
+            border-radius: 1.5rem
+    &_main-article-description   
+        h4
+            font-size: 2.5rem            
+            padding: 1.5rem 0
+        p
+            font-size: 1.6rem
+            line-height: 2
+    &_aside-articles
+        height: 100%
+        display: flex
+        flex-direction: column      
+        justify-content: space-between
+    &_aside-article
+        height: 30%               
+        display: flex                
+        img            
+            border-radius: 1.5rem
+            width: 20%
+            margin-right: 3rem
+            
+    &_aside_article-description
+        width: 40%
+        h4
+            font-size: 2.5rem
+            font-weight: 500
+            line-height: 1.6
+        p
+            font-size: 1.6rem
+            line-height: 1.6
+            margin-bottom: 1em
+
+            
+
+        
+
+.read-more
+    color: $orange
+    font-size: 1.8rem
+    font-style: italic
+    font-weight: 500
+
+.social-article img
+    width: 10rem
+.payment-article img,.cimbbank-logo
+    width: 5rem
+    height: auto
