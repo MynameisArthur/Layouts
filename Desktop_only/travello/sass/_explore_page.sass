@@ -199,8 +199,113 @@
             margin-bottom: 1em
 
             
+.destination-gallery-container
+    min-height: 60vh
+    &_gallery
+        margin-top: 3rem
+        overflow: hidden
+        border-radius: 2.5rem
+        height: 50vh
+        width: 90%
+    li
+        float: left
+        width: 25%
+        height: 100%        
+        img
+            height: 100%
+            transform: rotateY(180deg)
 
-        
+footer 
+    margin-top: 18rem
+.newsletter-form    
+    transform: translateY(-15rem)
+    background: $white
+    padding: 7rem
+    width: 90%
+    border-radius: 2rem
+    display: flex
+    justify-content: space-around
+    align-items: center
+    box-shadow: 0 0 8px rgba(darken($dark-brown,25%),0.75)
+    h2        
+        margin: 0
+        &::after
+            display: none   
+    .newsletter-form_text-input
+        width: 25rem 
+        display: flex
+        flex-direction: column
+        justify-content: space-between    
+    #newsletter-form_email        
+        border-radius: 1.5rem
+        padding: 1rem 2rem
+        outline: none
+        border: none
+        background: lighten($brown,30%) 
+        flex-basis: 50%
+        font-size: 1.6em
+    label        
+        font-size: 1.8rem
+        font-weight: 500
+        color: $dark-brown
+        margin-top: -2rem
+    & > *        
+        align-self: center   
+        height: 5rem 
+    .large-btn
+        font-size: 2rem
+        font-weight: 400
+        letter-spacing: 0.1rem
+        padding: 0 3.2rem
+.footer-articles
+    display: flex    
+    width: 90%
+    justify-content: space-between
+    article
+        display: flex
+        flex-direction: column       
+        h4
+            font-size: 1.6em
+            font-weight: 500
+            color: $white
+            margin-bottom: 2rem
+        ul
+            li,a
+                font-size: 1.6rem
+                color: $white
+                line-height: 1.6
+
+.social-article
+    & > img        
+        min-width: 18rem
+        margin-bottom: 2rem
+    .social-link        
+        margin-right: 1.5rem
+        width: 4rem
+        height: 4rem
+        +activate
+        img
+            width: 100%
+.social-links
+    display: flex
+.payment-article
+    ul
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        grid-template-rows: 1fr 1fr
+        grid-gap: 1rem        
+        height: 15rem
+    li 
+        height: 3rem   
+        +activate     
+        img
+            width: 100%
+.information-article, 
+.links-article,
+.contact-article
+    a
+        position: relative
+        +underline-on-hover
 
 .read-more
     color: $orange
@@ -210,6 +315,3 @@
 
 .social-article img
     width: 10rem
-.payment-article img,.cimbbank-logo
-    width: 5rem
-    height: auto
