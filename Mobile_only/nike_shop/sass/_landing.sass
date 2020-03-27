@@ -1,0 +1,85 @@
+.prev-button
+    left: 2rem
+    a
+        display: block
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+.like-button
+    right: 2rem
+
+header
+    margin-top: 10rem
+
+.main-heading
+    font-size: 3rem
+.subheading
+    font-size: 2rem
+    color: $gray
+    font-weight: 400
+    margin: 2rem 0
+
+.hero-img
+    margin-bottom: 4rem
+    position: relative 
+    padding-bottom: 10rem
+    &::after
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translate(-50%, -50%)
+        content: ''
+        width: 80%
+        height: 10%
+        border-radius: 50%
+        background: rgba($gray,0.5)
+        filter: blur(10px)
+
+.product-navigation_list
+    display: flex
+    justify-content: space-between
+    padding: 0 5rem 3rem 0
+    a
+        font-size: 1.8rem
+        &.active
+            color: $black
+            font-weight: 700
+.product-slider
+    padding: 2rem 0
+    overflow: hidden
+    width: 90%    
+    &_container
+        width: 150%
+    &_item
+        float: left
+        margin: 0 1.5rem 3rem 0
+        width: 12rem
+        border-radius: 1.5rem
+        overflow: hidden
+.price-section
+    clear: both
+    display: flex
+    justify-content: space-between
+    width: 90%
+.price-details
+    display: flex
+    flex-direction: column
+    color: $gray
+    font-size: 1.8rem
+    justify-content: space-between
+    height: 8vh    
+    span
+        font-weight: 700
+        color: $black
+    
+.buy-btn
+    padding: 2rem 6rem
+    background: $orange-pink
+    color: #fff
+    outline: none
+    border: none
+    border-radius: 2rem
+    font-size: 2rem
+    +activate

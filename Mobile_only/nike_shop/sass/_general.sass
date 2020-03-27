@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap')
+
+@mixin activate
+    &:active
+        transform: translateY(1px) scale(0.98)
+
+
 *,*::before,*::after
   margin: 0
   padding: 0
@@ -9,4 +15,34 @@ body, html
   height: 100%
   font-family: Roboto, sans-serif
 
+ul
+    list-style: none
+a
+    text-decoration: none
+    color: $gray
+
+.wrapper
+    width: 96%
+    margin: 0 2rem 5rem
+    
+
+.small-btn
+    position: absolute
+    top: 2rem    
+    width: 4.5rem
+    height: 4.5rem
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 1.5rem
+    border: 1px solid $gray
+    cursor: pointer
+    +activate
+    img
+        width: 50%
+
+img
+    width: 100%
+    object-fit: cover
+    object-position: center
 
