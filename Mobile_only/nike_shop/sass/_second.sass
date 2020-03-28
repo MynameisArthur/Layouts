@@ -1,34 +1,35 @@
 .second-page
     width: 100%
-    height: 100%
+    min-height: 100%
     background: rgba($gray,0.5)
     background-image: url(../img/shoe_jump.png) 
     background-size: cover
     background-repeat: no-repeat
-    overflow: hidden
-    .wrapper
-        height: 100%        
-       
-        
+    background-position: center  
+    display: flex
+    flex-direction: column
+    justify-content: flex-end         
 
 .zoom
     position: absolute
     top: 50%
     left: 50%
-    transform: translate(-50%, -55%)
-    width: 80vw
-    height: 60vh
+    transform: translate(-50%, -60%)
+    width: 75%
+    height: 55%
     padding: 1rem
     border-style: solid
-    border-width: 1.5em
+    border-width: 1em
     border-image: url(../img/four.svg) 
     border-image-slice: 50%
-    border-image-width: 4em    
+    border-image-width: 3em    
     &-inside
         background-image: linear-gradient(to bottom, rgba(#fff,0.3), transparent)
         border-radius: 1.5rem   
         width: 100%
         height: 100%  
+
+
 
 .thunder-button
     @extend .like-button
@@ -36,20 +37,32 @@
     img
         transform: rotate(30deg)
 
-.product-card    
-    margin-top: 80vh
-    margin-left: 5vw
-    width: 80%    
+.product-card 
+    margin-left: 5%    
+    width: 90%    
     background: #fff
-    border-radius: 1.5rem
-    padding: 1.5rem
+    border-radius: 3rem
+    padding: 2rem
     display: flex
     align-items: center
     &_img
         width: 25%
         overflow: hidden
-        border-radius: 1.5rem
-        margin-right: 2rem
+        border-radius: 2rem
+        margin-right: 1.5rem
+    &_details
+        display: flex
+        flex-direction: column
+        justify-content: space-around       
+        height: 100%
+        line-height: 1.6
         
+    h2
+        font-size: 2.1rem        
+    h4
+        font-size: 1.6rem
+        color: $gray
+        font-weight: 400
+
         
 
