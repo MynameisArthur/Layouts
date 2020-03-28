@@ -1,0 +1,130 @@
+.main-headline
+    font-family: 'Georgia',serif
+
+.main-nav
+    width: 15%
+    border-right: 2px solid $light-gray
+    padding: 3rem 5rem    
+    .exploration-podcast-logo
+        margin: 2.5rem 0
+.main-section
+    position: relative
+    width: 55%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    .decorative-square
+        top: 50%
+        right: 0
+.podcast-item
+    width: 30%  
+
+
+.main-nav_featured
+    margin-top: 6rem    
+    min-height: 55%
+    li       
+        display: flex
+        padding: 1.5rem 0
+    &-list
+        a
+            display: flex
+            align-items: center
+            width: 100%
+            font-size: 1.6rem
+            letter-spacing: 0.1rem
+            img
+                border-radius: 50%
+                width: 3.5rem
+                height: 3.5rem 
+                margin-right: 1.5em   
+    h3
+        font-size: 1.6rem
+        letter-spacing: 0.1rem
+
+.main-nav-item
+    position: relative
+    line-height: 2
+    a
+        font-size: 1.5rem
+        color : $gray
+    &::before
+        content: ''
+        position: absolute
+        top: 1.3em
+        left: -5em
+        display: none
+        width: 3rem
+        height: 2px
+        background: $green
+    &.active
+        a
+            font-weight: 700
+            color: $dark-blue
+        &::before
+            display: block
+
+.headlines
+    margin-left: 10rem
+    max-width: 55rem
+    line-height: 1.2
+    color: $dark-blue
+.main-headline
+    font-size: 8rem
+.subheadline   
+    margin-top: 4rem 
+    font-size: 2em
+    line-height: 2
+
+
+.player-interface
+    padding-top: 3rem    
+    width: 25vw
+    height: 75vh
+    background: url(../img/face08.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    position: relative
+    h3
+        color: #fff
+        font-weight: 300
+        font-size: 2rem
+        position: relative
+        margin-left: 5em        
+        &:before
+            content: ''
+            position: absolute
+            width: 4.5em
+            height: 0.1rem
+            top: 0.5em
+            left: -5em
+            background: #fff
+
+    .sound-bars
+        position: absolute
+        bottom: 5rem
+        left: 5rem
+    .play-btn
+        outline: none
+        border: none
+        background: $green
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 6rem
+        height: 6rem
+        border-radius: 50%
+        cursor: pointer
+        +activate
+        img
+            width: 30%
+.cta-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 5rem
+.user-detail
+   img
+       width: 3.5rem
+       height: 3.5rem
