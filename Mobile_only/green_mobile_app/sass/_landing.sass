@@ -1,4 +1,96 @@
-.wrapper
-    padding: 3rem
-    min-height: 75%
+.landing    
+    position: relative    
+    z-index: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-end    
+    max-height: 92vh  
+    overflow: hidden
+.decoration-olive_branch
+    position: absolute 
+    z-index: -1  
+    width: 700px
+    height: auto
+    object-fit: cover
+    top: -220px
+    right: -350px 
+    transform: rotateY(180deg)
+
+
+@media (min-width: 400px)
+    .landing
+        &:after
+            background-size: 150%
+            right: 0%
+.welcome-section    
+    position: relative
+    padding-left: 5rem
+    min-height: 500px    
+    h1
+        font-size: 3.5rem
+        font-weight: 400
+        max-width: 10em
+    &_icons
+        margin-top: 3rem
+        display: flex 
+        li
+            margin-right: 4.5rem 
+            text-align: center           
+            span
+                display: block
+                border-radius: 50%
+                background: $light-gray
+                width: 4rem
+                height: 4rem
+                margin: auto
+                position: relative
+            img
+                position: absolute
+                top: -0.75rem
+                right: -0.75rem
+                width: 3rem
+                object-fit: cover
+            h6
+                margin-top: 2rem
+                font-size: 1.5rem
+                color: $dark-gray
+                font-weight: 300
+.sign-in-btn
+    position: absolute
+    right: -4rem
+    bottom: 0
+    width: 12em
+    height: 3em
+    padding: 1rem 4rem
+    text-align: center
+    font-size: 2.4rem
+    color: #ffffff
+    background: lighten($brown,15%)
+    border-top-left-radius: 6rem
+    border-bottom-left-radius: 6rem
+    +activate
+
+.login-form
+    margin-top: 4rem
+    label        
+        display: flex
+        border-bottom: 2px solid lighten($light-green,20%)
+        padding: 1rem 0        
+        img
+            order: 0
+            width: 2.5rem
+            height: 2.5rem
+            margin-right: 1rem
+            transition: transform 0.3s ease
+    input
+        order: 1
+        background: none
+        outline: none
+        border: none
+        color: $dark-green
+        font-family: Merriweather, serif
+        font-size: 1.8rem
+        width: 100%
+    input:focus + img
+        transform: scale(1.25)
 

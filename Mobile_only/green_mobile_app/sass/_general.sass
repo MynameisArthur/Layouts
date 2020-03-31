@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Roboto:300,400&display=swap')
+
+@mixin activate
+  &:active
+    transform: translateY(1px) scale(0.98)
+
 *,*::before,*::after
   margin: 0
   padding: 0
@@ -6,6 +12,8 @@ body, html
   font-size: 10px
   width: 100%
   height: 100%
+  font-family: Roboto, sans-serif
+  background: lighten($light-gray,10%)
 ul, li
   list-style: none
 a
@@ -16,12 +24,40 @@ button
   border: none
   background: transparent
   cursor: pointer
+h1,h2,h3,h4
+    font-family: Merriweather, serif
+    color: $dark-green
+.wrapper    
+  height: 100vh
+  width: 100vw
+
+.open-menu
+  position: absolute
+  top: 5.5rem
+  left: 5rem
+  outline: none
+  border: none
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 4.5rem
+  height: 4.5rem  
+  span  
+    width: 4.5rem
+    height: 3px
+    background: $brown
+    position: relative
+    margin-bottom: 0.6rem
+    border-radius: 0.2rem
+    &:last-child
+      width: 3rem
 
 @media (min-width: 450px)
   .wrapper
-    max-width: 400px
+    max-width: 450px
+    height: 800px
     margin: 5rem auto    
-    border-radius: 1.5rem
+    border-radius: 6rem
     overflow: hidden
     box-shadow: 2px 8px 5px rgba(#444,0.5)
     overflow: hidden

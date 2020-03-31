@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Green Mobile App</title>
+    <link rel="shortcut icon" type="image/png" href="img/leaf_icon.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="wrapper">
-        <nav class="nav">
-            <button class="open-menu"></button>
-        </nav>
+    <div class="wrapper landing">
+        <img src="img/olive_branch.png" alt="olive branch" class="decoration-olive_branch">
+        <button class="open-menu"><span></span><span></span></button>        
         <section class="welcome-section">
-            <h1>Goon Morning, Arthur</h1>
-            <article class="buttons"></article>
+            <h1>Good Morning, Arthur</h1>
+            <ul class="welcome-section_icons">
+                <li><span><img src="img/leaf.svg" alt=""></span> <h6>Natural</h6></li>
+                <li><span><img src="img/heart.svg" alt="" style="transform: scale(1.4) translate(4px,4px)"></span> <h6>Healthy</h6></li>
+                <li><span><img src="img/apple.svg" alt=""></span> <h6>Nutritious</h6></li>
+            </ul>
             <form class="login-form">
                 <label>
-                    <input type="email" nam="email" placeholder="email" />
+                    <input type="email" name="email"/>
+                    <img src="img/mail.svg" alt="">
                 </label>
                 <label>
-                    <input type="password" nam="password" placeholder="password" />
+                    <input type="password" name="password" />
+                    <img src="img/key.svg" alt="">
                 </label>
                 <button type="submit" class="sign-in-btn">Sign In</button>
             </form>
