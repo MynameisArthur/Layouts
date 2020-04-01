@@ -2,23 +2,111 @@
     position: relative    
     z-index: 1
     display: flex
-    flex-direction: column
-    justify-content: flex-end    
-    max-height: 92vh  
-    overflow: hidden
+    flex-direction: column    
+    min-height: 92vh  
+    overflow-x: hidden
 .decoration-green_powder
+    background: url(../img/powder.png) no-repeat
+    background-size: cover
     position: absolute 
     z-index: -1  
-    width: 300px
-    height: auto
+    width: 250px
+    height: 250px    
     object-fit: cover
-    top: 100px
-    right: -70px
-    transform: rotateY(180deg)
-.shop-section
-    &_slide
-        float: left
-        width: 300px
-        height: 400px
-        background: $dark-gray
+    top: 80px
+    right: -80px    
+    transform: rotateY(180deg)            
+    border-radius: 50%    
     
+.shop-section
+    margin-top: 16rem
+    padding-left: 5rem        
+    h1
+        font-size: 3.5rem
+        font-weight: 400
+        max-width: 7em
+        line-height: 1.6
+        margin-bottom: 2rem
+    & > p
+        font-size: 2rem
+        font-weight: 300
+        line-height: 1.6
+        color: darken($dark-gray,10%)
+        max-width: 14em
+        
+    &_slider  
+        margin-top: 6rem      
+        width: 150% 
+        display: flex
+        align-items: center
+    &_slide
+        cursor: pointer                     
+        background: $light-gray
+        width: 12rem
+        min-height: 22rem
+        border-radius: 3rem
+        margin-right: 1.5rem
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        padding: 2rem  
+        h3
+            margin: 4rem 0 1rem            
+            max-width: 5em
+            font-size: 1.8rem
+            font-weight: 400
+        p
+            color: lighten($brown,15%)  
+            font-size: 2rem
+        img
+            width: 14rem
+            position: absolute
+            top: -5rem
+            right: -5rem
+        &:nth-child(1) img
+            width: 18rem
+        &:nth-child(2) img
+            transform: rotateZ(-45deg) rotateY(180deg)
+        &:nth-child(3) img
+            transform: rotateZ(-30deg)
+.product-section
+    margin: 5rem
+    margin-right: 0
+    border-top: 1px solid $dark-gray
+    padding: 4rem 0 4rem
+    display: flex    
+    &_img
+        margin-left: 3rem
+        margin-right: 2rem
+        position: relative
+        width: 11rem
+        height: 11rem
+        border-radius: 50%
+        background: $light-gray
+        img
+            position: absolute
+            top: -2rem
+            left: -3rem
+            width: 8rem
+
+    &_details
+        display: grid
+        grid-template-columns: auto auto
+        position: relative
+        max-width: 55%
+        h3
+            font-size: 2.5rem
+            font-weight: 400
+        span
+           color: lighten($brown,15%)
+           font-size: 2rem
+           line-height: 2
+        p
+            font-size: 1.6rem
+            font-weight: 300
+            color: darken($dark-gray,10%)
+        .plus-btn
+            position: initial
+            box-shadow: none
+            border: 1px solid lighten($brown,15%)
