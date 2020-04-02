@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700|Roboto:300,400&display=swap')
+
+@mixin activate
+    &:active
+      transform: translateY(1px) scale(0.98)
+
+*,*::before,*::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+body, html
+  font-size: 10px
+  width: 100%
+  height: 100%
+  font-family: 'Roboto', sans-serif
+ul, li
+  list-style: none
+a
+  text-decoration: none
+  color: #000
+button
+  outline: none
+  border: none
+  background: transparent
+  cursor: pointer
+h1,h2,h3,h4
+  font-family: 'Merriweather', serif
+
+body
+  background: linear-gradient(to bottom, rgba($pale-violet,0.3),rgba($medium-purple,0.3),rgba($violet,0.3)),url(../img/hero_img.jpg) no-repeat
+  background-size: cover
+  background-position: center
+
