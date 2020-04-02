@@ -2,6 +2,7 @@
 
 ### Inspired by layout [Exploration-Podcast-Homepage](https://dribbble.com/shots/5543445--Exploration-Podcast-Homepage/attachments)
 
+#### Desktop only layout
 
 Pattern from [Subtlepatterns](https://www.toptal.com/designers/subtlepatterns/)
 
