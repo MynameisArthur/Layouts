@@ -17,7 +17,7 @@ header
     a
         font-family: 'Lato',sans-serif
         font-size: 1.6rem
-        // color: #ffffff
+        color: #eee
         text-transform: uppercase
         letter-spacing: 1px
         outline: 2px solid #eee
@@ -33,6 +33,7 @@ header
     display: flex
     align-items: center
     justify-content: center 
+    z-index: 20
     &:hover
         box-shadow: inset .5rem .5rem 1rem #cacaca, inset -0.5rem -0.5rem 1rem #fff
 
@@ -42,17 +43,124 @@ header
     background: #333333
     display: inline-block
     position: relative
+    transition: background-color .5s
     &::before,
     &::after
         content: ''
         position: absolute 
         width: inherit
         height: inherit
-        background-color: inherit
+        background-color: #333
+        transition: all .5s
     &::before
         top: -0.8rem
     &::after
         top: 0.8rem
+
+.nav-list
+    width: 50rem
+    height: 100vh
+    position: absolute
+    top: 0
+    right: 0
+    background-color: #eeeeee
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    box-shadow: -0.5rem 0 1rem rgba(0,0,0,.1)
+    z-index: 15
+    transform: translateX(55rem)
+    transition: transform .5s
+
+.nav-item
+    border-bottom: 2px solid crimson
+
+.nav-link
+    display: block
+    color: #333333
+    font-size: 1.6rem
+    text-transform: uppercase
+    padding: 0.5rem
+    font-weight: 700
+    transition: color .5s
+    &:hover
+        color: crimson
+
+.hero
+    width: 100%
+    height: 100vh
+    background: url(../img/golden-gate-bridge.jpg)no-repeat center
+    background-size: cover
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        width: inherit
+        height: inherit
+        top: 0
+        left: 0
+        background-color: rgba(0,0,0,.5)
+.hero-clipped
+    width: 60%
+    height: inherit
+    background-color: #eeeeee
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 5
+    clip-path: polygon(20% 0,100% 0, 100% 100%,0 100%)
+    transform-origin: right
+.hero-textbox
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    font-family: 'Lato',sans-serif
+    text-transform: uppercase
+    text-align: center
+    line-height: 1.5
+    color: #333333
+    padding: 1rem
+    z-index: 20
+.main-heading
+    font-size: 6rem
+    font-weight: 900
+    letter-spacing: 1rem
+.sub-heading
+    font-size: 1.6rem
+    font-weight: 400
+    letter-spacing: .5rem
+.cta-btn
+    display: inline-block
+    font-size: 1.2rem
+    letter-spacing: 1px
+    color: #ffffff
+    background-color: crimson
+    padding: 1rem 4rem
+    margin-top: 5rem
+    border-radius: .4rem
+    box-shadow: 3px 3px 1rem rgba(0,0,0,.3)
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: inherit
+        border-radius: inherit
+        z-index: -1
+        transition: all .5s
+    &:hover::after
+        transform: scaleX(1.2) scaleY(1.6)
+        opacity: 0
+
+
+
+
 .open
     .bar
         background-color: transparent
@@ -62,3 +170,5 @@ header
         &::after
             top: 0
             transform: rotate(-135deg)
+    .nav-list
+        transform: translateX(0)
