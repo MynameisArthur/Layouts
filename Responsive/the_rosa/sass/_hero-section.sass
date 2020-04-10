@@ -14,6 +14,8 @@
     font-weight: 100
     line-height: 0.4
     letter-spacing: 2px
+    opacity: 0
+    animation: fadeUp .5s forwards .5s
 
 .first-letter
     text-transform: uppercase
@@ -27,6 +29,7 @@
     font-weight: 900
     letter-spacing: 0.5rem
     margin-right: -0.5rem
+    animation: scale .5s forwards
 
 .separator
    display: flex
@@ -39,6 +42,8 @@
     height: .25rem
     background-color: #fff
     position: relative
+    opacity: 0
+    animation: grow 2s forwards .9s
 
 .line-right::before,
 .line-left::before
@@ -47,6 +52,8 @@
     top: 50%
     transform: translateY(-50%)
     border: .6rem solid transparent
+    opacity: 0
+    animation: grow .5s forwards 1.2s
 
 .line-right::before
     border-right-color: #fff
@@ -55,10 +62,16 @@
     border-left-color: #fff
     left: 0
 
-.asterisk
+.asterisk    
     font-size: 1.2rem
     color: var(--secondary-font-color)
-    margin: 0 1.6rem
+    margin: 0 1.6rem   
+    opacity: 0
+    animation: spin .5s forwards .7s
+
+.single-animation
+    opacity: 0
+    animation: fadeUp .5s forwards 1.5s
 
 .headline-description
     color: #fff
