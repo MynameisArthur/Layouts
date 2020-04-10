@@ -1,0 +1,49 @@
+.global-headline
+    text-align: center
+    margin-top: 3.9rem
+    .asterisk
+        color: var(--body-font-color)
+        margin: 2.4rem 0
+    .sub-headline
+        letter-spacing: -0.1rem
+        line-height: 0.42
+.discover-our-story 
+    .global-headline
+        margin-top: 6.9rem
+
+.headline-dark
+    color: var(--main-font-color-dark)
+    letter-spacing: .7rem
+    margin-right: -0.7rem
+
+.restaurant-info    
+    text-align: center
+
+.restaurant-description
+    margin-bottom: 3rem
+    p
+        line-height: 1.6
+        margin-bottom: 2.4rem
+.body-btn
+    font-size: 1.5rem
+    color: var(--secondary-font-color)
+    position: relative
+    transition: color .5s   
+    margin-bottom: 3rem
+    &::before
+        content: ''
+        position: absolute
+        bottom: -3px
+        left: 0
+        background-color: var(--secondary-font-color)
+        transition: background-color .5s
+        width: 100%
+        height: 2px
+    &:hover,&:focus
+        color: var(--main-font-color-dark)
+    &:hover::before,&:focus::before
+        background-color: var(--main-font-color-dark)
+
+
+
+
