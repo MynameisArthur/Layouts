@@ -1,0 +1,76 @@
+header
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    background-image: linear-gradient(to bottom,rgba(#000,0.5),transparent)
+.nav
+    height: 7.2rem
+    display: flex
+    align-items: center
+    justify-content: center
+.menu-toggle
+    color: #ffffff
+    font-size: 2.2rem
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 2.5rem
+    cursor: pointer
+    z-index: 15
+.fa-times
+    display: none
+.nav-list
+    position: fixed
+    top: 0
+    left: 0
+    width: 80%
+    height: 100vh
+    background-color: var(--main-font-color-dark)
+    padding: 4.4rem
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    z-index: 12
+    transform: translateX(-100%)
+    transition: transform .5s
+
+.nav
+    &::before
+        content: ''
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        background-color: rgba(#000,0.8)
+        z-index: 10
+        opacity: 0
+        transform: scale(0)
+        transition: opacity 0.5s
+
+.open 
+    .fa-times
+        display: block
+    .fa-bars
+        display: none
+    .nav-list
+        transform: translateX(0)
+    .nav::before
+        opacity: 1
+        transform: scale(1)
+.nav-item
+    border-bottom: 2px solid rgba(#fff,.3)
+
+.nav-link
+    display: block
+    color: #fff
+    text-transform: uppercase
+    font-size: 1.6rem
+    letter-spacing: 2px
+    margin-right: -2px
+    transition: color .5s
+    &:hover
+        color: var(--secondary-font-color)
+
