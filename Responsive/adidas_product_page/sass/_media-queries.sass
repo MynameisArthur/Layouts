@@ -1,0 +1,98 @@
+@media (max-width: 1200px)
+    .tone-2 img
+        left: -8rem
+    .product-info 
+        h1
+            font-size: 3.5rem
+            margin-bottom: 2rem
+        p
+            font-size: 1.5rem
+            margin-bottom: 2rem
+        h2
+            font-size: 2rem
+            margin-bottom: 2rem
+    .btn
+        padding: 1.5rem
+        font-size: 1rem
+
+@media (max-width: 900px)
+    .logo
+        padding-left: 1.5rem
+    nav ul
+        height: 5rem
+        font-size: 1.4rem
+        li
+            padding: 0 1.5rem
+            line-height: 5rem
+    .tone-2 img
+        left: -5rem
+
+@media (max-width: 600px) 
+    .tone-2 img
+        left: -5rem
+    .product-info p
+        font-size: 1.2rem
+    .btn
+        padding: 1rem
+    nav
+        display: flex
+        border-bottom: none
+        flex-direction: column
+        width: 25rem
+        height: 100vh
+        background-color: #f7f7f6
+        justify-content: space-evenly
+        transform: translateX(-25rem)
+        transition: transform .5s
+        ul
+            height: initial
+            display: block
+            font-size: 2rem
+            text-align: center
+            li
+                padding: 0
+                line-height: initial
+                margin-bottom: 2rem
+    .logo
+        padding: 0
+    .nav-right ul li ,
+    .nav-right ul li:nth-child(1)
+        border: none
+    .menu-toggle
+        display: flex
+    .fa-times
+        display: block
+        position: absolute
+        top: 2rem
+        right: 2rem
+    .active
+        transform: translateX(0)
+    .overlay
+        position: absolute
+        width: 0
+        height: 100vh
+        background-color: rgba(#000,0.8)
+        z-index: 12
+        opacity: 0
+        transition: opacity .5s
+        &.menu-open
+            width: 100%
+            opacity: 1
+
+@media (max-width: 400px)   
+    .tone-2 img
+        left: -1rem
+    .product-info 
+        h1
+            font-size: 2rem
+            margin-bottom: 1rem
+        p
+            font-size: 1rem
+            margin-bottom: 1rem
+        h2
+            font-size: 1.5rem   
+            margin-bottom: 1rem
+    .btn
+        padding: 0.7rem
+        font-size: 0.8rem
+
