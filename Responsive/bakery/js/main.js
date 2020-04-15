@@ -6,3 +6,7 @@ hamburgerMenu.addEventListener('click',()=>{
     toggle.forEach(item=>item.classList.toggle('open'));
     navList.classList.toggle('open');
 });
+AOS.init({
+    easing: 'ease',
+    duration: 1000
+});
