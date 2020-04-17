@@ -4,29 +4,29 @@
     background: radial-gradient(at right bottom,$medium-blue3,$dark-blue)    
     display: flex
 
-.main-section
-    flex: 1
+.main-section  
+    flex: 1    
 .aside-section
     max-width: 7rem
 
 .header
     width: 100%
     min-width: 80vw
-    height: 100vh
-    background: url(../img/eye_candy.png) no-repeat left
+    min-height: 100vh
+    background: url(../img/eye_candy.png) no-repeat left    
     position: relative
-    display: flex    
+    padding-bottom: 3rem
+    display: flex  
+
     .headline
-        position: relative
+        position: relative        
         flex: 1       
         margin-left: auto
         max-width: 50% 
-        background: url(../img/eye_candy.png) no-repeat left
-        background-size: 250%        
+        background:url(../img/eye_candy.png) no-repeat left        
         overflow: hidden        
         -webkit-text-fill-color: transparent
-        -webkit-background-clip: text
-        outline: 4px dotted red
+        -webkit-background-clip: text        
         font-family: 'Oswald',sans-serif
         text-transform: uppercase        
         padding: 5rem
@@ -36,21 +36,110 @@
         h1
             font-size: 20rem
             letter-spacing: 0.05em
+            text-shadow: 2px 2px 0 rgba($light-blue,0.2),1px 1px 0 rgba($medium-pink,0.3)
             span
                 font-weight: 300
+                // text-shadow: 1px 1px 0 rgba($medium-pink,0.5)
         h2
             font-size: 7rem
             font-weight: 200
             letter-spacing: 0.05em
+            text-shadow: 2px 2px 0 rgba($light-blue,0.2),1px 1px 0 rgba($medium-pink,0.3)
         p
             font-size: 2.5rem
-       
+            text-shadow: 1px 1px 0 rgba($light-blue,0.3),1px 1px 0 rgba($medium-pink,0.6)
+
+//main-nav    
 .main-nav
     position: fixed
+    top: 0
+    left: 0
+    z-index: 10
+    width: calc(100vw - 10rem)
+    height: 10rem    
+    display: flex
+    align-items: center
+    justify-content: flex-end    
+    &_list
+        display: flex
+        justify-content: space-between
+        width: 30%
+        margin-right: 4rem
+        a
+            font-size: 1.4rem
+            text-transform: uppercase
+            
 
+    
+// content-navigation
 .content-navigation
     position: absolute
     bottom: 0
     left: 0
+    display: flex
+    justify-content: space-between
+    width: calc(100vw - 10rem)
+.arrows
+    img
+        width: 1rem
+        height: 1rem
 
-    
+
+
+//aside section
+.aside-section
+    border-left: 1px solid rgba($medium-blue2,0.5)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    margin-right: 2rem
+.menu-btn
+    background: $medium-blue3
+    padding: 1rem
+    display: flex
+    width: 10rem
+    height: 10rem
+    img
+        margin: auto
+        max-width: 2rem
+        max-height: 2rem 
+.social-links
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)      
+    li
+       text-align: center
+       margin-right: 6em      
+       transform-origin: center center
+       transform: rotateZ(-90deg)
+       margin: 8rem 0
+       padding-top: 2rem
+    a
+        font-size: 1.4rem
+
+.language
+    padding: 1rem
+    display: flex
+    width: 10rem
+    height: 10rem
+    select
+        margin: auto
+        display: block
+        color: #ffffff
+        background: url(../img/down-arrow.svg) no-repeat center
+        background-size: 10px
+        background-positon: 100% 0%    
+        border: none   
+        appearance: none   
+        width: 5rem 
+        cursor: pointer
+        option            
+            text-align: center
+            color: $dark-blue
+
+
+
+
+
