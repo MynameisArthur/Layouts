@@ -4,3 +4,46 @@
     .text .btn
         font-size: 1.2rem
     
+@media (max-width: 850px)
+    .nav-list
+        position: fixed
+        display: none
+        top: 0
+        left: 0
+        height: 100vh
+        padding: 5rem 0 0 5rem
+        flex-direction: column
+        align-items: initial
+        background-color: #191919
+        z-index: 100
+        overflow-y: scroll
+        & > li
+            line-height: 6rem
+        li:hover
+            & > .sub-menu
+                opacity: 1
+                visibility: visible
+                max-height: initial
+        li.move-right
+            margin: 0 auto 0 0
+            line-height: initial
+    .sub-menu
+        position: initial
+        border: 3px solid transparent
+        border-left-color: $red
+        margin-left: 1rem
+        max-height: 0
+        &::before
+            display: none
+    .menu-icons
+        display: block
+    .ion-md-close
+        display: none
+    nav.active
+        .ion-md-close
+            display: block
+        .ion-md-menu    
+            display: none
+        .nav-list
+            display: flex
+
