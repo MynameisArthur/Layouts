@@ -24,6 +24,21 @@ img
   width: 100%
 .mobile-menu-btn
   display: none
+  width: 5rem
+  justify-content: space-around
+  position: relative
+  z-index: 11
+  span
+    display: block
+    width: 0.7rem
+    height: 0.7rem
+    background: #fff
+    border-radius: 50%
+    animation: 1s forwards    
+  &.active
+    span
+      animation-name: transform
+      
 .btn
   display: inline-block
   background: #ffffff

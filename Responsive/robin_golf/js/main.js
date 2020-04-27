@@ -1,5 +1,6 @@
-const body = document.querySelector('body');
 const navContainer = document.querySelector('.nav-container');
+const menuToggler = document.querySelector('.mobile-menu-btn');
+const mobileNav = document.querySelector('.mobile-nav');
 
 window.addEventListener('scroll',(e)=>{
     if(window.scrollY > 150)
@@ -9,5 +10,8 @@ window.addEventListener('scroll',(e)=>{
     else{
         navContainer.classList.remove('white-bg');  
     }
-}
-);
+});
+menuToggler.addEventListener('click',()=>{
+    menuToggler.classList.toggle('active');    
+    mobileNav.classList.toggle('open');
+});
