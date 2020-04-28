@@ -11,7 +11,21 @@ window.addEventListener('scroll',(e)=>{
         navContainer.classList.remove('white-bg');  
     }
 });
-menuToggler.addEventListener('click',()=>{
+menuToggler.addEventListener('click',openMobileMenu);
+
+function openMobileMenu()
+{
     menuToggler.classList.toggle('active');    
+    if(mobileNav.classList.contains('open')){
+        mobileNav.style.animation = `slide-up 0.9s forwards`;      
+        menuToggler.removeEventListener('click',openMobileMenu);    
+    }   
     mobileNav.classList.toggle('open');
-});
+    setTimeout(()=>{
+            mobileNav.style.animation = ``;
+            menuToggler.addEventListener('click',openMobileMenu);
+        },900);  
+}
+
+    
+

@@ -27,19 +27,41 @@ img
   width: 5rem
   justify-content: space-around
   position: relative
-  z-index: 11
+  z-index: 11  
+  &::before,&:after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 25%
+    width: 3rem
+    height: 2px
+    background: #333
+    transform-origin: center   
+    transition: transform 0.4s ease-in-out 1.25s
+  &::before
+    transform: scale(0) rotate(45deg) translate(0,-50%)
+  &::after
+    transform: scale(0) rotate(-45deg) translate(0,-50%)
+    transition-delay: 1.45s
   span
     display: block
     width: 0.7rem
     height: 0.7rem
     background: #fff
-    border-radius: 50%
-    animation: 1s forwards    
-  &.active
+    border-radius: 50%       
+  &.active        
+    &::before
+      animation: animateCloseLeft 0.4s forwards 1.25s
+    &::after      
+      animation: animateCloseRight 0.4s forwards 1.45s
     span
-      animation-name: transform
-      
-.btn
+      animation: change-color 0.75s forwards
+      &:nth-child(2)
+        animation-delay: 0.25s
+      &:nth-child(3)
+        animation-delay: 0.5s
+  
+.btn  
   display: inline-block
   background: #ffffff
   color: #333

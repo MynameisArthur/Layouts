@@ -7,7 +7,7 @@
     min-height: 10rem  
     display: flex
     align-items: center  
-    transition: top 0.3s ease  
+    transition: top 0.3s ease     
     a
         color: #ffffff
     &::before
@@ -21,6 +21,7 @@
         transform-origin: bottom
         transform: scaleY(0)  
         transition: transform 0.3s ease  
+        border-bottom: 1px solid rgba(#333,0.5) 
     &.white-bg
         top: 0
         &::before
@@ -56,8 +57,7 @@
     width: 100vw    
     height: calc(100vh + 10rem)
     z-index: 8
-    background: #ffffff
-    animation: slide-up 0.9s forwards    
+    background: #ffffff       
     .nav-list
         margin-top: -10rem
         width: 100%
