@@ -1,0 +1,4 @@
+#Stwórz main.sass
+
+oryginał (nie ruszać)- touch sass/_main.sass && code sass/_main.sass 
+touch sass/_main.sass && code sass/_main.sass

@@ -9,27 +9,31 @@
     align-items: center  
     transition: top 0.3s ease     
     a
-        color: #ffffff
-    &::before
+        color: $creamy
+    &::before,&::after
         content: ''
         position: absolute
         top: 0 
         left: -50%                 
-        background-color: rgba(#fff,1)
+        background-color: $creamy
         width: 200%
         height: 100%
         transform-origin: bottom
         transform: scaleY(0)  
         transition: transform 0.3s ease  
         border-bottom: 1px solid rgba(#333,0.5) 
+    &::after
+        z-index: -1
+        
+
     &.white-bg
         top: 0
         &::before
             transform: scaleY(1)              
         .robin-logo
-            filter: invert(0) brightness(0)
-        a
-            color: #333
+            filter: invert(0) brightness(0.3)
+        a            
+            color: $dark-gray
         .mobile-menu-btn
             span
                 background: #333
@@ -57,7 +61,7 @@
     width: 100vw    
     height: calc(100vh + 10rem)
     z-index: 8
-    background: #ffffff       
+    background: $creamy  
     .nav-list
         margin-top: -10rem
         width: 100%
@@ -84,7 +88,7 @@
         & ~ .nav-container 
             .robin-logo
                 transition: filter 0.4s ease-in-out
-                filter: invert(0) brightness(0)
+                filter: invert(0) brightness(0.3)
             a
                 transition: color 0.4s ease-in-out
                 color: #333333
@@ -131,7 +135,7 @@
         text-transform: uppercase
         font-weight: 700  
 .token
-    position: absolute
+    position: absolute    
     top: -1rem
     right: -2.5rem
     border-radius: 50%
@@ -144,3 +148,4 @@
     font-size: 1.2rem
     font-weight: 700
     color: #ffffff
+    

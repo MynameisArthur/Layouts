@@ -1,27 +1,32 @@
 .header-section
     width: 100%
     min-height: 100vh
-    background: linear-gradient(to bottom, rgba(#000,0.4),transparent),url(../img/golf-hero_sm.jpg) center no-repeat
-    background-size: cover
+    background: linear-gradient(to bottom, rgba(#000,0.4),transparent),url(../img/golf-hero_lg.jpg) center no-repeat
+    background-size: cover    
     display: flex
     padding-top: 25rem
 
 .headline
     margin: auto
-    margin-top: 5%
-    color: #ffffff
-    min-height: 30vh    
+    margin-top: 20%
+    color: $creamy    
     display: flex
     flex-direction: column
     justify-content: space-between
     align-items: center
+    & > *
+        margin-bottom: 2rem
     
 .main-heading
     text-align: center
-    font-size: 6.5rem
-    text-transform: uppercase    
-    max-width: 10em
+    font-size: 5.5rem
+    font-weight: 500
+    text-transform: uppercase            
+    color: $creamy
 .sub-heading
     text-align: center
     font-size: 1.6rem
     font-weight: 500
+.headline_cta
+    margin-top: 4rem
+   
