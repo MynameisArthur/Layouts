@@ -13,6 +13,12 @@
     .nav-container        
         justify-content: space-around 
         padding: 0 5rem
+    .golf-showcase_item 
+        &:hover
+            &::before
+                background: rgba($dark-gray,1)      
+        img
+            display: none
 @media (min-width: 768px)
     .bag-btn-small
         display: none
@@ -25,6 +31,14 @@
     .nav-container
         width: 75%
         left: 12%
+    .golf-showcase
+        flex-direction: row
+        width: 100%
+    .golf-showcase_item
+        min-height: 50vh
+    
+        
+    
 @media (min-width: 900px)
     .nav-container
         width: 50%

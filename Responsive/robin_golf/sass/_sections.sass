@@ -4,17 +4,7 @@ section
     align-items: center 
     justify-content: space-around  
     width: 100% 
-    article
-        width: 90%  
-        margin: 0 auto
-        display: flex
-        flex-direction: column
-        h2
-            text-align: center
-            font-size: 3rem
-            color: $dark-gray
-        
-
+    background: $creamy
 .first-section    
     min-height: 100vh
     background: $creamy    
@@ -24,17 +14,13 @@ section
         min-height: 55vh
         overflow: hidden
         video
+            outline: 2px solid red
             margin: auto
-            mask: url(../img/mask.png)no-repeat 
-            mask-size: 120%  
-            mask-position: -85px 65%
             width: 70%         
             display: block
-            margin-top: -10vh
-            
-            
-    
-    
+            mask: url(../img/mask.png)no-repeat 
+            mask-size: 100% 
+            mask-position: 0px 60% 
 
 .first-section_img    
     position: relative    
@@ -63,32 +49,147 @@ section
         font-size: 1.5rem
         color: $dark-gray
 
-.second-section
 
+// Section 2
 .golf-showcase_item
     width: 100%
-    min-height: 70vh
+    min-height: 75vh
     background-size: cover
     background-repeat: no-repeat
     background-position: center
     position: relative
-    margin-bottom: 1px
+    z-index: 4
+    overflow: hidden
+    cursor: pointer
+    img
+        width: 100%
+        min-height: inherit
+        display: block
+        object-fit: cover
+        object-position: left top
+        transform-origin: center 
+        transition: transform 1s ease
+
+            
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 5
+        background: rgba($dark-gray,0)
+        transiton: background 0.5s ease-in-out
+        -webkit-transition: background 0.5s ease-in-out 0.2s
+    &:hover        
+        .golf-showcase_item-category span::before
+            height: 100%
+        .circle circle
+            transform-origin: center
+            transform: rotateZ(-90deg)
+            animation: draw-circle 0.75s forwards cubic-bezier(.9,-0.08,1,.86) 0.2s
+            &:nth-child(2)
+                animation-delay: 0.1s
+                animation-duration: 0.55s
+        .golf-showcase_shop
+            span
+                height: 1.3em
+        img
+            transform: scale(1.1)
+.golf-showcase_item-category
+    position: absolute
+    z-index: 6    
+    transform: rotateZ(-90deg) translate(-8rem,-3rem)
     span
-        font-size: 1.4rem
+        display: inline-block  
+        padding: 0.2rem 0.4rem   
+        font-size: 1.3rem
         font-weight: 700
         color: $creamy
         text-transform: uppercase
-        display: inline-block
-        transform: rotateZ(-90deg) translate(-8rem,-3rem)
-        
-
+        position: relative
+        z-index: 7
+        &::before
+            content: ''
+            position: absolute
+            z-index: -1
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 0            
+            transition: height 0.5s ease
 .women
     background-image: url(../img/golf_tools01.jpg)
+    & > span::before,.golf-showcase_item-category span::before
+        background: $orange
 .men
     background-image: url(../img/golf_tools02.jpg)
+    & > span::before,.golf-showcase_item-category span::before
+        background: $dark-gray
 .junior
     background-image: url(../img/golf_tools03.jpg)
-                
+    .circle circle
+        stroke: $pale-green
+    & > span::before,.golf-showcase_item-category span::before
+        background: $pale-green
+    
+
+.golf-showcase_shop
+    display: none
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 6
+    border-radius: 50%
+    width: 12rem
+    height: 12rem
+    color: $creamy    
+    display: flex
+    font-size: 1.5rem
+    font-weight: 700
+    text-transform: uppercase 
+    span
+        position: relative
+        margin: auto
+        height: 0em
+        transition: height 0.5s ease-in-out
+        overflow: hidden
+        &::before
+            content: ''
+            position: absolute            
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 50%
+            z-index: -1
+
+.circle 
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%              
+    z-index: 8  
+    display: grid    
+    circle         
+        stroke-dashoffset: 1200
+        stroke-dasharray:  1200
+        position: relative
+        z-index: 8
+        &:nth-child(2)
+          opacity: 0.3  
+      
+.golf-showcase
+    width: 90%  
+    margin: 0 auto
+    display: flex
+    flex-direction: column    
+    h2
+        text-align: center
+        font-size: 3rem
+        color: $dark-gray        
                     
     
     
