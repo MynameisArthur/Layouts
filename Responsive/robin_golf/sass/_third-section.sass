@@ -1,0 +1,64 @@
+.slider
+    width: 80%
+    height: 70vh
+    display: flex
+    padding: 2rem 5rem
+    overflow: hidden
+
+.slider-container
+    position: relative
+    top: 0
+    left: 0
+    margin: auto
+    width: 300%
+    height: 100%
+    display: flex   
+
+.slider-container_item  
+    flex: 1
+    min-width: 100%  
+    position: relative
+    margin-right: 2rem
+    position: absolute
+    top: 0
+    left: 0
+    &:not(.current-slide)
+       left: 120%
+    img
+        width: 100%        
+    &-headline
+        position: absolute
+        top: 50%
+        left: 5rem
+        color: $creamy
+        max-width: 30%
+        transform: translateY(-50%)
+        h3
+            font-size: 4rem
+            text-transform: uppercase
+            line-height: 1.2
+            margin-bottom: 2rem
+        p
+            font-size: 1.5rem
+            font-weight: 500
+
+.round-btn
+    position: absolute    
+    top: 55%
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 8rem
+    height: 8rem
+    background: $pale-green
+    font-size: 3rem
+    color: $creamy
+    border: 0.8rem solid $creamy
+    cursor: pointer
+    +activate
+    &.go-left
+        left: -4rem
+    &.go-right
+        right: -4rem
+        
